@@ -37,3 +37,4 @@ examine_sensor_data
 collect_neural_net_data
 train_neural_network
 test_neural_network
+*~
