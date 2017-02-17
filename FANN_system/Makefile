@@ -4,7 +4,7 @@ CFLAGS=-Wall
 SOURCES=collect_neural_net_data.c examine_sensor_data.c test_neural_network.c train_neural_network.c
 EXECUTABLES=$(SOURCES:.c=)
 
-all: collect_neural_net_data examine_sensor_data test_neural_network train_neural_net
+all: collect_neural_net_data examine_sensor_data test_neural_network train_neural_network
 
 collect_neural_net_data: collect_neural_net_data.c
 	$(CC) $(CFLAGS) -o collect_neural_net_data collect_neural_net_data.c $(LDFLAGS)
