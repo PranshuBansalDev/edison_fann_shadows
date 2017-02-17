@@ -1,7 +1,7 @@
 CC=gcc
 LDFLAGS=-lmraa -lfann
 CFLAGS=-Wall
-SOURCES=collect_neural_net_data.c examine_sensor_data.c test_neural_network.c train_neural_net.c
+SOURCES=collect_neural_net_data.c examine_sensor_data.c test_neural_network.c train_neural_network.c
 EXECUTABLES=$(SOURCES:.c=)
 
 all: collect_neural_net_data examine_sensor_data test_neural_network train_neural_net
@@ -15,11 +15,11 @@ examine_sensor_data: examine_sensor_data.c
 test_neural_network: test_neural_network.c
 	$(CC) $(CFLAGS) -o test_neural_network test_neural_network.c $(LDFLAGS)
 
-train_neural_net: train_neural_net.c
-	$(CC) $(CFLAGS) -o train_neural_net train_neural_net.c $(LDFLAGS)
+train_neural_network: train_neural_network.c
+	$(CC) $(CFLAGS) -o train_neural_network train_neural_network.c $(LDFLAGS)
 
 clean: 
-	rm -f collect_neural_net_data examine_sensor_data test_neural_network train_neural_net
+	rm -f collect_neural_net_data examine_sensor_data test_neural_network train_neural_network
 	rm -f *~
 	rm -f TEST.net
 	rm -f test_data.txt
